@@ -9,18 +9,24 @@ const tables = document.querySelectorAll("table");
 const navOom = document.querySelector(".nav_oom");
 const navPt = document.querySelector(".nav_pt");
 const navEt = document.querySelector(".nav_et");
+const navPc = document.querySelector(".nav_pc");
+const navYt = document.querySelector(".nav_yt");
 const navCt = document.querySelector(".nav_ct");
 const navDt = document.querySelector(".nav_dt");
+const navWs = document.querySelector(".nav_ws");
 
 // Tables
 const tableOom = document.querySelector(".table-oom");
 const tablePt = document.querySelector(".table-pt");
 const tableEt = document.querySelector(".table-et");
+const tablePc = document.querySelector(".table-pc");
+const tableYt = document.querySelector(".table-yt");
 const tableCt = document.querySelector(".table-ct");
 const tableDt = document.querySelector(".table-dt");
+const tableWs = document.querySelector(".table-ws");
 
 // Ranking link
-const rankingLink = document.querySelector(".ranking-link");
+// const rankingLink = document.querySelector(".ranking-link");
 
 //////// EVENT LISTENERS
 // Nav items - all
@@ -55,6 +61,20 @@ navEt.addEventListener("click", function () {
   tableEt.classList.remove("hidden");
 });
 
+navPc.addEventListener("click", function () {
+  tables.forEach(function (li) {
+    li.classList.add("hidden");
+  });
+  tablePc.classList.remove("hidden");
+});
+
+navYt.addEventListener("click", function () {
+  tables.forEach(function (li) {
+    li.classList.add("hidden");
+  });
+  tableYt.classList.remove("hidden");
+});
+
 navCt.addEventListener("click", function () {
   tables.forEach(function (li) {
     li.classList.add("hidden");
@@ -67,4 +87,11 @@ navDt.addEventListener("click", function () {
     li.classList.add("hidden");
   });
   tableDt.classList.remove("hidden");
+});
+
+navWs.addEventListener("click", function () {
+  tables.forEach(function (li) {
+    li.classList.add("hidden");
+  });
+  tableWs.classList.remove("hidden");
 });
