@@ -4,6 +4,7 @@
 // Lists of items
 const navItems = document.querySelectorAll("ul.list-of-rankings li");
 const tables = document.querySelectorAll("table");
+const players = document.querySelectorAll("tr");
 
 // Nav elements
 const navOom = document.querySelector(".nav_oom");
@@ -94,4 +95,19 @@ navWs.addEventListener("click", function () {
     li.classList.add("hidden");
   });
   tableWs.classList.remove("hidden");
+});
+
+players.forEach(function (tr) {
+  const tds = tr.querySelectorAll("td");
+  const tdCountry = tr.querySelectorAll("td")[2];
+
+  if (tdCountry) {
+    if (tdCountry.textContent === "POL") {
+      console.log("JESt");
+
+      tds.forEach(function (td) {
+        td.classList.add("pol");
+      });
+    }
+  }
 });
