@@ -73,6 +73,10 @@ td {
   font-size: 1.4em;
 }
 
+.pol {
+  background-color: #ff1a1a;
+}
+
 th {
   padding-top: 3px;
   padding-bottom: 3px;
